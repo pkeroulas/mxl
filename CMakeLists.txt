@@ -60,7 +60,6 @@ if(APPLE)
 endif()
 
 add_subdirectory(lib)
-add_subdirectory(utils)
 if (BUILD_TOOLS)
     add_subdirectory(tools)
 endif()
@@ -132,6 +131,8 @@ if(EXISTS "/etc/os-release")
         # set(CPACK_RPM_PACKAGE_REQUIRES "")
     endif()
 endif()
+
+add_subdirectory(utils)
 
 # CPack Configuration
 set(CPACK_PACKAGE_NAME "dmfmxl-dev")
